@@ -1,11 +1,11 @@
 
 # Сервис авторассылок 
-##1. Установка
-###1.1 Загрузка зависимостей
+## 1. Установка
+### 1.1 Загрузка зависимостей
     composer require sendpulse/rest-api amocrm/amocrm-api-library
-###1.2 Создание БД
+### 1.2 Создание БД
     CREATE DATABASE `mailing_service` /*!40100 COLLATE 'utf8_general_ci' */;
-###1.3 Создание таблиц
+### 1.3 Создание таблиц
     CREATE TABLE `posts` (
 	`id` INT(11) NOT NULL AUTO_INCREMENT,
 	`title` VARCHAR(255) NOT NULL COLLATE 'utf8_general_ci',
@@ -20,7 +20,7 @@
     )
     COLLATE='utf8_general_ci'
     ENGINE=InnoDB;
-##2. Использование
+## 2. Использование
 **index.php** - UI для добавления постов
 **run_bot.php** - Создание рассылок
 **return.php** - Возвращение поста из отстойника
