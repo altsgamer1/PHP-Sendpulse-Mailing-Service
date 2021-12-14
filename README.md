@@ -20,6 +20,8 @@
     )
     COLLATE='utf8_general_ci'
     ENGINE=InnoDB;
+### 1.4 Указать данные Sendpulse
+Задать свои значения $sender_name, $sender_email, $list_id, $client_id, $secret в файле **classes/SendpulseProvider.php**
 ## 2. Использование
 **index.php** - UI для добавления постов
 
