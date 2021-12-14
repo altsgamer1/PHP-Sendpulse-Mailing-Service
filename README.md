@@ -3,9 +3,7 @@
 ## 1. Установка
 ### 1.1 Загрузка зависимостей
     composer require sendpulse/rest-api amocrm/amocrm-api-library
-### 1.2 Создание БД
-    CREATE DATABASE `mailing_service` /*!40100 COLLATE 'utf8_general_ci' */;
-### 1.3 Создание таблиц
+### 1.2 Создание таблиц
     CREATE TABLE `posts` (
 	`id` INT(11) NOT NULL AUTO_INCREMENT,
 	`title` VARCHAR(255) NOT NULL COLLATE 'utf8_general_ci',
@@ -20,6 +18,8 @@
     )
     COLLATE='utf8_general_ci'
     ENGINE=InnoDB;
+### 1.3 Указать подключение MySQL
+Задать свои значения HOST, DATABASE, USERNAME, PASSWORD в файле **classes/Model.php**
 ### 1.4 Указать данные Sendpulse
 Задать свои значения $sender_name, $sender_email, $list_id, $client_id, $secret в файле **classes/SendpulseProvider.php**
 ## 2. Использование
