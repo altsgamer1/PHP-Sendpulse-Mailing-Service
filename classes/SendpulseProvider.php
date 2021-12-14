@@ -11,7 +11,7 @@ class SendpulseProvider
     public $mails;
     private $sender_name = 'Имя отправителя';
     private $sender_email = 'Email отправителя';
-    private $list_id = 105301;
+    private $list_id = 'ID адресной книги';
     private $client_id = 'ID приложения';
     private $secret = 'Секретный ключ приложения';
     private $sendpulse;
