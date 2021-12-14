@@ -9,11 +9,11 @@ class SendpulseProvider
     public $subject;
     public $material;
     public $mails;
-    private $sender_name = 'Assylkhan Myrzaliyev';
-    private $sender_email = 'assylkhan.mm@gmail.com';
+    private $sender_name = 'Имя отправителя';
+    private $sender_email = 'Email отправителя';
     private $list_id = 105301;
-    private $client_id = '9995c92edb9ec6db2d02dda87ad094b8';
-    private $secret = 'b236c89c525e0bc80a0ec1808c1404a7';
+    private $client_id = 'ID приложения';
+    private $secret = 'Секретный ключ приложения';
     private $sendpulse;
 
     public function __construct() {
