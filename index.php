@@ -1,16 +1,18 @@
 <?php
-include 'classes/Model.php';
-include 'classes/Post.php';
+if (isset($_POST['submit'])) {
+	include 'classes/Model.php';
+	include 'classes/Post.php';
 
-use Mailing\Post;
+	use Mailing\Post;
 
-$post = new Post();
-$post->title = $_POST['title'];
-$post->description = $_POST['description'];
-$post->youtube = $_POST['youtube'];
-$post->vc = $_POST['vc'];
-$post->not_returnable = ($_POST['not_returnable'] ? $_POST['not_returnable'] : 0);
-$post->save();
+	$post = new Post();
+	$post->title = $_POST['title'];
+	$post->description = $_POST['description'];
+	$post->youtube = $_POST['youtube'];
+	$post->vc = $_POST['vc'];
+	$post->not_returnable = ($_POST['not_returnable'] ? $_POST['not_returnable'] : 0);
+	$post->save();
+}
 ?>
 <html>
 	<head>
@@ -47,7 +49,7 @@ $post->save();
 				  	<input type="checkbox" class="form-check-input" id="not_returnable" name="not_returnable" value="1">
 				  	<label class="form-check-label" for="not_returnable">Невозвратный</label>
 				</div>
-				<button type="submit" class="btn btn-primary">Добавить</button>
+				<input type="submit" name="submit" value="1" class="btn btn-primary">
                 <?php if(isset($_GET['success'])): ?>
                 <p class="text-success mt-3">Пост добавлен успешно</p>
                 <?php endif ?>
